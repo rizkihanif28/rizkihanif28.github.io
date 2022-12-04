@@ -91,11 +91,11 @@ section {
     }
 }
 
-/* @media only screen and (min-width: 479px) {
+@media only screen and (min-width: 479px) {
     .bg-intro {
         min-height: 600px;
     }
-} */
+}
 
 .bg-intro {
     height: 100vh;
