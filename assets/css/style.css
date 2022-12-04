@@ -33,7 +33,7 @@
 
 @media only screen and (max-width: 1024px) {
     html {
-        font-size: 9.411764705882353px;
+        font-size: 29px;
     }
 }
 @media only screen and (max-width: 768px) {
@@ -63,42 +63,19 @@ section {
 }
 
 /* ===================== Navbar =======================*/
-@media only screen and (min-width: 1024px) {
-    .bg-intro {
-        min-height: 600px;
-    }
-}
-@media only screen and (min-width: 869px) {
+@media only screen and (min-width: 990px) {
     .bg-intro {
         min-height: 790px;
     }
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 390px) {
     .bg-intro {
-        min-height: 790px;
-    }
-}
-
-@media only screen and (min-width: 679px) {
-    .bg-intro {
-        min-height: 790px;
-    }
-}
-
-@media only screen and (min-width: 579px) {
-    .bg-intro {
-        min-height: 680px;
-    }
-}
-
-@media only screen and (min-width: 479px) {
-    .bg-intro {
-        min-height: 600px;
+        min-height: 660px;
     }
 }
 
 .bg-intro {
-    height: 100vh;
+    max-height: 100vh;
     width: 100vw;
     object-fit: cover;
     filter: brightness(0.3);
@@ -116,11 +93,6 @@ section {
     margin-left: 20px;
 }
 /* ===================== Intro Section =======================*/
-
-.descriptionMe {
-    margin-top: 90px;
-}
-
 .intro-content {
     vertical-align: middle;
     text-align: center;
@@ -153,7 +125,7 @@ section {
 .intro-content .intro-position span {
     display: inline-block;
 }
-.intro-content .intro-position span::after {
+/* .intro-content .intro-position span::after {
     content: '|';
     text-align: center;
     display: inline-block;
@@ -166,21 +138,29 @@ section {
     display: inline-block;
     padding: 0 14px 0 8px;
     color: rgba(255, 255, 255, 0.3);
-}
+} */
+
 .intro-content .button {
     color: #ffffff !important;
-    border-color: rgba(255, 255, 255, 0.3);
-    height: 6rem !important;
-    line-height: 5.4rem !important;
+    border-color: rgba(163, 163, 163, 0.3);
+    /* height: 6rem !important; */
+    line-height: 3.5rem !important;
     padding: 0 3.5rem 0 3rem !important;
-    margin-top: 0.6rem;
-    font-size: 1.3rem;
+    margin-top: 2rem;
+    /* font-size: 1.3rem; */
     text-transform: uppercase;
     letter-spacing: 0.25rem;
 }
+
+.button.stroke {
+    background: transparent !important;
+    border: 2px solid #cc005f;
+    line-height: 4.8rem;
+}
+
 .intro-content .button:hover,
 .intro-content .button:focus {
-    border-color: #cc005f;
+    border-color: #ff0077;
 }
 .intro-content .button::after {
     display: inline-block;
@@ -199,7 +179,7 @@ section {
     width: 100%;
     left: 0;
     font-size: 2rem;
-    margin: 0;
+    margin-top: 40px;
     padding: 0;
 }
 .intro-social li {
@@ -219,10 +199,10 @@ section {
 /* ===================== Intro Section Responsive =======================*/
 @media only screen and (max-width: 1024px) {
     .intro-content h1 {
-        font-size: 7.6rem;
+        font-size: 2.6rem;
     }
     .intro-social {
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .intro-social li {
         margin: 0 15px;
@@ -230,7 +210,7 @@ section {
 }
 @media only screen and (max-width: 768px) {
     -content h1 {
-        font-size: 5.2rem;
+        font-size: 1.2rem;
     }
     .intro-content h5 {
         font-size: 1.8rem;
@@ -239,7 +219,7 @@ section {
         font-size: 1.3rem;
     }
     .intro-social {
-        font-size: 2.5rem;
+        font-size: 1.9rem;
     }
     .intro-social li {
         margin: 0 10px;
@@ -247,7 +227,7 @@ section {
 }
 @media only screen and (max-width: 600px) {
     .intro-content h1 {
-        font-size: 4.6rem;
+        font-size: 2.5rem;
         margin-bottom: 0.6rem;
     }
     .intro-content h5 {
@@ -266,19 +246,17 @@ section {
         display: none !important;
     }
     .intro-social {
-        font-size: 2.4rem;
+        font-size: 1.6rem;
     }
 }
 
 /* ===================== About Section =======================*/
 #about {
-    background: #ffffff;
-    margin-top: 10px;
+    padding-top: 12rem;
 }
 #about .section-intro {
     margin-bottom: 3rem;
 }
-
 .section-intro {
     max-width: 700px;
     margin-left: auto;
@@ -342,15 +320,9 @@ section {
     margin-top: 6rem;
 }
 
-.button-section {
-    text-align: center;
-}
-.button-section .button {
-    width: 250px;
-}
-.button-section [class*='col-'] .button:first-child {
-    margin-right: 4rem;
-}
+/* .descriptionMe .stroke {
+    background-color: #ca00a9;
+} */
 
 #about .resumeLink {
     margin-top: 20px;
