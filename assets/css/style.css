@@ -254,8 +254,9 @@ section {
 #about {
     padding-top: 12rem;
 }
-#about .section-intro {
-    margin-bottom: 3rem;
+#about .aboutMe h4 {
+    color: #cc005f;
+    font-weight: var(--font-semi-bold);
 }
 .section-intro {
     max-width: 700px;
@@ -272,8 +273,8 @@ section {
     margin-left: -30px;
 }
 .intro-info img {
-    height: 9rem;
-    width: 9rem;
+    height: 10rem;
+    width: 10rem;
     border-radius: 50%;
     margin: 0.9rem 0 0 0;
     float: left;
@@ -320,9 +321,9 @@ section {
     margin-top: 6rem;
 }
 
-/* .descriptionMe .stroke {
-    background-color: #ca00a9;
-} */
+.button-section .resumeLink:hover {
+    color: #ffffff;
+}
 
 #about .resumeLink {
     margin-top: 20px;
@@ -337,7 +338,68 @@ section {
     transition: all 0.3s ease-in;
 }
 
+/* ===================== Responsive About =======================*/
+@media only screen and (max-width: 1024px) {
+    .intro-info {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .intro-info {
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .intro-info img {
+        height: 10rem;
+        width: 10rem;
+        float: none;
+        display: inline-block;
+    }
+    .intro-info .lead {
+        padding-left: 0;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .about-content h3 {
+        text-align: center;
+    }
+    .about-content .info-list,
+    .about-content .skill-bars {
+        margin-bottom: 4.2rem;
+    }
+    .button-section .button {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .button-section [class*='col-'] .button:first-child {
+        margin-right: 0;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .intro-info {
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .intro-info img {
+        height: 10rem;
+        width: 10rem;
+        float: none;
+        display: inline-block;
+    }
+    .intro-info .lead {
+        padding-left: 0;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
 /* ===================== Skills Section =======================*/
+
+#skills .section-skills h4 {
+    color: #cc005f;
+    font-weight: var(--font-semi-bold);
+}
 
 .skillsContainer {
     text-align: center;
@@ -374,14 +436,24 @@ ul {
 }
 
 /* ===================== Project Section =======================*/
-.workDescription h3 {
-    font-size: 23px;
+#project .projectHead h4 {
+    color: #cc005f;
     font-weight: var(--font-semi-bold);
 }
-.workDescription h4 {
-    font-size: 20px;
-}
 
+.workDescription h3 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-left: 40px;
+}
+.workDescription h4 {
+    font-size: 19px;
+    letter-spacing: 0.1rem;
+    margin-left: 40px;
+}
+.workDescription h4 span {
+    color: #cc005f;
+}
 .workBox {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -389,8 +461,8 @@ ul {
     padding: 30px;
     margin-top: 40px;
     border-radius: 15px;
-    -webkit-box-shadow: 10px 10px 15px rgba(7, 4, 4, 0.1);
-    box-shadow: 0px 8px 15px 10px rgba(7, 4, 4, 0.1);
+    -webkit-box-shadow: 10px 10px 15px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 8px 15px 10px rgba(255, 255, 255, 0.1);
     border: 1px solid #eee;
     background: #ffffff;
 }
@@ -411,4 +483,61 @@ ul {
     width: 100%;
     border-radius: 10px;
     border: 1px solid #ddd;
+}
+
+.workBox .workDescription ul {
+    list-style: disc inside;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.7rem;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.workBox .workLink a {
+    margin-left: 40px;
+    color: #cc005f;
+    font-weight: var(--font-medium);
+    text-decoration: underline;
+    font-size: 18px;
+    letter-spacing: 0.1rem;
+}
+.workBox .workLink a:hover {
+    color: #ff0077;
+}
+/* ===================== Responsive Project =======================*/
+
+@media (max-width: 767px) {
+    .section-project {
+        background-color: transparent;
+        padding: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .workBox {
+        display: block;
+        padding: 0;
+    }
+}
+@media (max-width: 767px) {
+    .workBox .workDescription h3 {
+        font-size: 18px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .workBox .workDescription h4 {
+        margin-left: 10px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .workBox .workImage {
+        max-width: 500px;
+        margin: 0 auto;
+    }
 }
