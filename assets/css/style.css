@@ -68,7 +68,7 @@ section {
         min-height: 790px;
     }
 }
-@media only screen and (min-width: 390px) {
+@media only screen and (min-width: 359px) {
     .bg-intro {
         min-height: 660px;
     }
@@ -442,12 +442,12 @@ ul {
 }
 
 .workDescription h3 {
-    font-size: 22px;
+    font-size: 21px;
     letter-spacing: 1px;
     margin-left: 40px;
 }
 .workDescription h4 {
-    font-size: 19px;
+    font-size: 18px;
     letter-spacing: 0.1rem;
     margin-left: 40px;
 }
