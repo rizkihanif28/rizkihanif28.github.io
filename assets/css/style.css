@@ -582,6 +582,130 @@ ul {
     padding: 0 0 0 40px;
 }
 
-.formContact {
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus {
+    outline: 0px !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+}
+
+#formContact {
     margin-top: 45px;
+}
+
+.contactForm {
+    max-width: 340px;
+}
+
+#formContact form {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    outline: 0px !important;
+}
+#formContact form .form-field {
+    position: relative;
+}
+#formContact form .form-field:before,
+#formContact form .form-field:after {
+    content: '';
+    display: table;
+}
+#formContact form .form-field:after {
+    clear: both;
+}
+#formContact form .form-field label {
+    font-size: 1.1rem;
+    line-height: 2.4rem;
+    position: absolute;
+    bottom: -1.2rem;
+    right: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 0 2rem;
+    margin: 0;
+    background: #cc005f;
+}
+#formContact form .form-field label::after {
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    margin-top: -6px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #cc005f;
+    content: '';
+}
+#formContact input[type='text'],
+#formContact input[type='password'],
+#formContact input[type='email'],
+#formContact textarea {
+    width: 100%;
+    margin-bottom: 0;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+#formContact input[type='text'],
+#formContact input[type='password'],
+#formContact input[type='email'] {
+    height: 3rem;
+    padding: 2.5rem 2rem;
+}
+#formContact input[type='text']:focus,
+#formContact input[type='password']:focus,
+#formContact input[type='email']:focus {
+    border-color: #cc005f;
+}
+#formContact textarea {
+    padding: 1.8rem 2rem;
+}
+#formContact textarea:focus {
+    border-color: #cc005f;
+}
+
+#formContact button:focus {
+    border-color: #cc005f;
+}
+#formContact button.submitform {
+    width: 50%;
+    font-size: 1.2rem;
+    display: block;
+    letter-spacing: 0.1rem;
+    line-height: 3.1rem;
+    margin-top: 4rem;
+    background: #ff0077;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: var(--font-semi-bold);
+}
+#formContact button.submitform:hover,
+#formContact button.submitform:focus {
+    background: #cc005f;
+}
+
+/* ===================== FOOTER =======================*/
+footer {
+    padding: 20px;
+    background-color: white;
+    border-top: 1px solid rgb(168, 168, 168);
+}
+footer p {
+    width: 100%;
+    color: #333;
+    font-size: 1rem;
+    padding-left: 100px;
+}
+footer a {
+    color: #333;
+}
+footer a:hover {
+    color: #cc005f;
+}
+
+footer .social .social-footer li {
+    margin-right: 20px;
+    font-size: 1.4rem;
 }
