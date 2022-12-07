@@ -692,11 +692,14 @@ footer {
     background-color: white;
     border-top: 1px solid rgb(168, 168, 168);
 }
+footer .copyright i {
+    color: #cc005f;
+}
 footer p {
     width: 100%;
     color: #333;
     font-size: 1rem;
-    padding-left: 100px;
+    /* padding-left: 100px; */
 }
 footer a {
     color: #333;
