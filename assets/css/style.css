@@ -27,26 +27,6 @@
     --mb-3: 3rem;
 }
 
-/* html {
-    font-size: 10px;
-}
-
-@media only screen and (max-width: 1024px) {
-    html {
-        font-size: 29px;
-    }
-}
-@media only screen and (max-width: 768px) {
-    html {
-        font-size: 10px;
-    }
-}
-@media only screen and (max-width: 400px) {
-    html {
-        font-size: 9.411764705882353px;
-    }
-} */
-
 html,
 body {
     font-family: var(--font-family);
@@ -62,6 +42,121 @@ section {
     display: block;
 }
 
+/* ===================== Menu Toggle =======================*/
+
+@media (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+.menu-toggle {
+    float: right;
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: relative;
+}
+
+.menu-toggle span {
+    display: block;
+    background-color: #ff0077;
+    width: 24px;
+    height: 3px;
+    margin-top: -1.5px;
+    /* font: 0/0 a; */
+    text-shadow: none;
+    color: transparent;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    bottom: auto;
+    left: auto;
+    -moz-transition: background 0.2s ease-in-out;
+    -o-transition: background 0.2s ease-in-out;
+    -webkit-transition: background 0.2s ease-in-out;
+    -ms-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
+}
+
+.menu-toggle span::before,
+.menu-toggle span::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    position: absolute;
+    left: 0;
+    -moz-transition-duration: 0.2s, 0.2s;
+    -o-transition-duration: 0.2s, 0.2s;
+    -webkit-transition-duration: 0.2s, 0.2s;
+    -ms-transition-duration: 0.2s, 0.2s;
+    transition-duration: 0.2s, 0.2s;
+    -moz-transition-delay: 0.2s, 0s;
+    -o-transition-delay: 0.2s, 0s;
+    -webkit-transition-delay: 0.2s, 0s;
+    -ms-transition-delay: 0.2s, 0s;
+    transition-delay: 0.2s, 0s;
+}
+
+.menu-toggle span::before {
+    top: -8px;
+    -moz-transition-property: top, transform;
+    -o-transition-property: top, transform;
+    -webkit-transition-property: top, transform;
+    -ms-transition-property: top, transform;
+    transition-property: top, transform;
+}
+.menu-toggle span::after {
+    bottom: -8px;
+    -moz-transition-property: bottom, transform;
+    -o-transition-property: bottom, transform;
+    -webkit-transition-property: bottom, transform;
+    -ms-transition-property: bottom, transform;
+    transition-property: bottom, transform;
+}
+
+.menu-toggle a:hover,
+.menu-toggle a:focus,
+.menu-toggle a:active {
+    color: #ff0077;
+    outline: 0;
+}
+.menu-toggle a,
+.menu-toggle a:visited {
+    color: #000000;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* is clicked */
+.menu-toggle.is-clicked span {
+    background-color: rgba(255, 0, 119, 0);
+}
+.menu-toggle.is-clicked span::before,
+.menu-toggle.is-clicked span::after {
+    background-color: #ff0077;
+    -moz-transition-delay: 0s, 0.2s;
+    -o-transition-delay: 0s, 0.2s;
+    -webkit-transition-delay: 0s, 0.2s;
+    -ms-transition-delay: 0s, 0.2s;
+    transition-delay: 0s, 0.2s;
+}
+.menu-toggle.is-clicked span::before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.menu-toggle.is-clicked span::after {
+    bottom: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
 /* ===================== Navbar =======================*/
 @media only screen and (min-width: 990px) {
     .bg-intro {
@@ -227,7 +322,8 @@ section {
 }
 @media only screen and (max-width: 600px) {
     .intro-content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
         margin-bottom: 0.6rem;
     }
     .intro-content h5 {
@@ -356,9 +452,17 @@ section {
     }
     .intro-info .lead {
         padding-left: 0;
+        font-size: 17px;
         text-align: center;
         margin-top: 20px;
     }
+    #about .button-section .resume-me .resumeLink {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+    /* #about .button-section .resume-me .resumeLink a {
+        font-size: 0.4;
+    } */
 }
 
 /* ===================== Skills Section =======================*/
@@ -738,10 +842,10 @@ footer p {
     width: 100%;
     color: #333;
     font-size: 1rem;
-    /* padding-left: 100px; */
 }
 footer a {
     color: #333;
+    font-weight: var(--font-medium);
 }
 footer a:hover {
     color: #cc005f;
@@ -751,3 +855,18 @@ footer .social .social-footer li {
     margin-right: 20px;
     font-size: 1.4rem;
 }
+
+/* footer .row {
+    max-width: 1100px;
+} */
+
+/* @media (max-width: 768px) {
+    footer .social .social-footer ul {
+        justify-content: center;
+        display: block;
+    }
+} */
+/* 
+.navbar-toggler-icon {
+    color: #ff0077;
+} */
