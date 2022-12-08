@@ -406,6 +406,13 @@ ul {
     height: 50px;
 }
 
+@media (max-width: 767px) {
+    .skillGrid li img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
 /* ===================== Project Section =======================*/
 #project .projectHead h4 {
     color: #cc005f;
@@ -469,13 +476,16 @@ ul {
     margin-top: 20px;
     margin-left: 10px;
 }
+.workBox .workLink {
+    margin-left: 40px;
+    font-weight: var(--font-medium);
+    font-size: 18px;
+}
 
 .workBox .workLink a {
-    margin-left: 40px;
+    margin-right: 40px;
     color: #cc005f;
-    font-weight: var(--font-medium);
     text-decoration: underline;
-    font-size: 18px;
     letter-spacing: 0.1rem;
 }
 .workBox .workLink a:hover {
@@ -498,7 +508,7 @@ ul {
 }
 @media (max-width: 767px) {
     .workBox .workDescription h3 {
-        font-size: 18px;
+        font-size: 20px;
         margin-left: 10px;
         margin-top: 20px;
     }
@@ -507,7 +517,21 @@ ul {
 @media (max-width: 767px) {
     .workBox .workDescription h4 {
         margin-left: 10px;
-        font-size: 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .workBox .workDescription ul {
+        margin-left: 0 !important;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .workDescription .workLink {
+        margin-left: 10px !important;
+        margin-bottom: 20px;
     }
 }
 
@@ -535,7 +559,7 @@ ul {
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
     border: 1px solid #eee;
-    padding: 24px;
+    padding: 10px 24px;
     border-radius: 15px;
 }
 .contactTypes .flexContainer:first-child {
@@ -545,7 +569,7 @@ ul {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
-    max-width: 40%;
+    max-width: 45%;
     text-align: center;
     justify-content: center;
 }
@@ -684,6 +708,21 @@ input:focus {
 #formContact button.submitform:hover,
 #formContact button.submitform:focus {
     background: #cc005f;
+}
+
+/* ===================== Responsive Contact =======================*/
+
+@media (max-width: 767px) {
+    .contactTypes .flexContainer .typeBox a {
+        font-size: 12px;
+        max-width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .contactTypes .flexContainer .typeBox i {
+        font-size: 40px;
+        max-width: 100%;
+    }
 }
 
 /* ===================== FOOTER =======================*/
