@@ -13,7 +13,6 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
 
         <link rel="stylesheet" href="assets/css/style.css" />
-        <!-- <link rel="stylesheet" href="assets/css/base.css" /> -->
 
         <link rel="icon" type="image/png" href="/assets/img/RH.png" />
     </head>
@@ -22,17 +21,8 @@
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="#"><img src="/assets/img/brand1.png" alt="img-brand" /></a>
-                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
-
-                <div class="toggle">
-                    <a class="menu-toggle" href="#">
-                        <span></span>
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                <div class="navbarNav ms-auto">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
@@ -47,6 +37,9 @@
                         </li>
                     </ul>
                 </div>
+                <label id="icon">
+                    <i class="fa fa-solid fa-bars"></i>
+                </label>
             </div>
         </nav>
 
@@ -61,7 +54,7 @@
                             <span>Junior Web Developer</span>
                             <!-- <span>Backend Developer</span> -->
                         </p>
-                        <a class="btn btn-outline-light btn-sm button stroke smoothscroll" href="#about" title="">More About Me</a>
+                        <a class="btn btn-outline-light btn-sm button stroke smoothscroll" href="#about">More About Me</a>
                     </div>
                 </div>
             </div>
