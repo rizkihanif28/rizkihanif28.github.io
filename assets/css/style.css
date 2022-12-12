@@ -4,7 +4,6 @@
     /*========== Font and typography ==========*/
     --font-family: 'Poppins', sans-serif;
 
-    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
     --big-font-size: 2rem;
     --normal-font-size: 0.938rem;
     --small-font-size: 0.813rem;
@@ -14,20 +13,8 @@
     --font-regular: 400;
     --font-medium: 500;
     --font-semi-bold: 600;
-
-    /*========== Margenes Bottom ==========*/
-    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
-    --mb-0-25: 0.25rem;
-    --mb-0-5: 0.5rem;
-    --mb-0-75: 0.75rem;
-    --mb-1: 1rem;
-    --mb-1-5: 1.5rem;
-    --mb-2: 2rem;
-    --mb-2-5: 2.5rem;
-    --mb-3: 3rem;
 }
 
-html,
 body {
     font-family: var(--font-family);
     overflow-x: hidden;
@@ -49,41 +36,20 @@ nav #icon {
     font-size: 30px;
     line-height: 80px;
     float: right;
-    margin-right: 40px;
+    margin-right: 20px;
     cursor: pointer;
     display: none;
 }
 
-@media (max-width: 990px) {
-    nav #icon {
-        display: block;
-    }
-    .navbar .navbar-nav {
-        margin-top: 30px;
-        position: fixed;
-        width: 50%;
-        height: 100vh;
-        top: 80px;
-        right: 0;
-        background: #000000;
-        text-align: center;
-    }
-    nav li {
-        display: block;
-        line-height: 30px;
-    }
+nav ul {
+    float: right;
 }
 
-/* ===================== Navbar =======================*/
-@media only screen and (min-width: 990px) {
-    .bg-intro {
-        min-height: 790px;
-    }
-}
-@media only screen and (min-width: 359px) {
-    .bg-intro {
-        min-height: 660px;
-    }
+.nav-link {
+    font-size: 17px;
+    font-weight: var(--font-medium);
+    margin-left: 30px;
+    color: #ffffff;
 }
 
 .bg-intro {
@@ -99,24 +65,79 @@ nav #icon {
 .navbar-brand img {
     width: 130px;
 }
-.navbar .nav-item a {
-    font-size: 17px;
-    font-weight: var(--font-medium);
-    margin-left: 20px;
+
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+    color: #cc005f;
+    transition: 0.5s;
 }
+
+/* .navbar-nav .nav-link.active {
+    color: #cc005f;
+} */
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .show > .nav-link {
+    color: #cc005f;
+}
+
+@media (max-width: 990px) {
+    nav #icon {
+        display: block;
+    }
+    .navbar-nav {
+        margin-top: 30px;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        right: 0;
+        bottom: 0;
+        left: -100%;
+        background: #000000;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav li {
+        display: block;
+        line-height: 50px;
+    }
+
+    nav .nav-item a.active,
+    a:hover {
+        color: #cc005f;
+        transition: 0.5s;
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+}
+
+/* ===================== Navbar =======================*/
+@media only screen and (min-width: 990px) {
+    .bg-intro {
+        min-height: 790px;
+    }
+}
+@media only screen and (min-width: 359px) {
+    .bg-intro {
+        min-height: 660px;
+    }
+}
+
 /* ===================== Intro Section =======================*/
 .intro-content {
     vertical-align: middle;
     text-align: center;
-    -webkit-transform: translateY(-2.1rem);
+    /* -webkit-transform: translateY(-2.1rem);
     -ms-transform: translateY(-2.1rem);
-    transform: translateY(-2.1rem);
+    transform: translateY(-2.1rem); */
 }
 .intro-content h1 {
     color: #ffffff;
     font-size: 3rem;
     line-height: 1.071;
-    /* text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
 }
 .intro-content h5 {
     color: #cc005f;
@@ -124,7 +145,6 @@ nav #icon {
     line-height: 1.565;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
-    /* text-shadow: 0 0 6px rgba(0, 0, 0, 0.2); */
 }
 .intro-content .intro-position {
     font-size: 1.7rem;
@@ -132,7 +152,6 @@ nav #icon {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     color: #ffffff;
-    /* text-shadow: 0 0 6px rgba(0, 0, 0, 0.2); */
 }
 .intro-content .intro-position span {
     display: inline-block;
@@ -155,11 +174,9 @@ nav #icon {
 .intro-content .button {
     color: #ffffff !important;
     border-color: rgba(163, 163, 163, 0.3);
-    /* height: 6rem !important; */
     line-height: 3.5rem !important;
     padding: 0 3.5rem 0 3rem !important;
     margin-top: 2rem;
-    /* font-size: 1.3rem; */
     text-transform: uppercase;
     letter-spacing: 0.25rem;
 }
@@ -181,13 +198,11 @@ nav #icon {
     font-size: 1.6rem;
     line-height: inherit;
     text-align: center;
-    position: relative;
     left: 1.2rem;
 }
 
 .intro-social {
     display: block;
-    position: absolute;
     width: 100%;
     left: 0;
     font-size: 2rem;
@@ -264,9 +279,9 @@ nav #icon {
 }
 
 /* ===================== About Section =======================*/
-#about {
+/* #about {
     padding-top: 12rem;
-}
+} */
 #about .aboutMe h4 {
     color: #cc005f;
     font-weight: var(--font-semi-bold);
@@ -281,7 +296,6 @@ nav #icon {
     margin-right: auto;
     text-align: center;
     margin-bottom: 3.6rem;
-    position: relative;
 }
 
 .intro-info {
@@ -299,6 +313,7 @@ nav #icon {
 .intro-info .lead {
     text-align: left;
     padding-left: 13rem;
+    font-weight: var(--font-regular);
 }
 
 .button-section .resumeLink:hover {
@@ -306,7 +321,7 @@ nav #icon {
 }
 
 #about .resumeLink {
-    margin-top: 20px;
+    color: white;
     background-color: #cc005f;
     padding: 15px;
     border-radius: 40px;
@@ -651,9 +666,9 @@ input:focus {
     margin-bottom: 3rem;
     outline: 0px !important;
 }
-#formContact form .form-field {
+/* #formContact form .form-field {
     position: relative;
-}
+} */
 #formContact form .form-field:before,
 #formContact form .form-field:after {
     content: '';
@@ -772,18 +787,3 @@ footer .social .social-footer li {
     margin-right: 20px;
     font-size: 1.4rem;
 }
-
-/* footer .row {
-    max-width: 1100px;
-} */
-
-/* @media (max-width: 768px) {
-    footer .social .social-footer ul {
-        justify-content: center;
-        display: block;
-    }
-} */
-/* 
-.navbar-toggler-icon {
-    color: #ff0077;
-} */
